@@ -30,8 +30,13 @@
 #import "CCResponderManager.h"
 #import "CCNode.h"
 #import "CCDirector.h"
-#import "CCDirectorMac.h"
 #import "CCScene.h"
+
+#if __CC_PLATFORM_IOS
+#import "Platforms/iOS/CCDirectorIOS.h"
+#elif __CC_PLATFORM_MAC
+#import "Platforms/Mac/CCDirectorMac.h"
+#endif
 
 // -----------------------------------------------------------------
 #pragma mark -
